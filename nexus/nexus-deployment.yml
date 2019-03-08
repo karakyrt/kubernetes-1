@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: nexus-deployment
   namespace: nexus
-  labels: 
+  labels:
     app: nexus
 spec:
   replicas: 1
-  template: 
+  template:
     metadata:
-      labels: 
+      labels:
         app: nexus
     spec:
       volumes:
         - name: nexus-volume
           persistentVolumeClaim:
-            claimName: nexus-pvc    
+            claimName: nexus-pvc
       containers:
         - name: nexus-container
           image: "fsadykov/docker-nexus"
@@ -29,7 +29,7 @@ spec:
           ports:
             - containerPort: 8081
               name: nexus-http
-            - containerPort: 8082
+            - containerPort: 8085
               name: docker-repo
           volumeMounts:
             - name: nexus-volume
