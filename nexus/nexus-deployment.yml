@@ -18,7 +18,7 @@ spec:
             claimName: nexus-pvc    
       containers:
         - name: nexus-container
-          image: "quay.io/travelaudience/docker-nexus:3.15.2"
+          image: "fsadykov/docker-nexus"
           env:
             - name: INSTALL4J_ADD_VM_PARAMS
               value: "-Xms1200M -Xmx1200M -XX:MaxDirectMemorySize=2G -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
@@ -29,6 +29,8 @@ spec:
           ports:
             - containerPort: 8081
               name: nexus-http
+            - containerPort: 8082
+              name: docker-repo
           volumeMounts:
             - name: nexus-volume
               mountPath: /nexus-data
