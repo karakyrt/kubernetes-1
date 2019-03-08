@@ -29,6 +29,8 @@ spec:
           ports:
             - containerPort: 8081
               name: nexus-http
+            - containerPort: 8082
+              name: docker-repo
           volumeMounts:
             - name: nexus-volume
               mountPath: /nexus-data
