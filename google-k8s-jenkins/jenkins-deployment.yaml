@@ -16,12 +16,15 @@ spec:
         name: jenkins-pod
     spec:
       containers:
-      - name: jenkins-pod
+      - stdin: true
+        tty: true
+        name: jenkins-pod
         imagePullPolicy: Always
-        image: kolomyya/jenkins:v1
+        image: fsadykov/centos_jenkins:0.2
         ports:
         - containerPort: 8080
         - containerPort: 50000
+
         volumeMounts:
           - mountPath: /var/run
             name: docker-sock
@@ -32,5 +35,3 @@ spec:
           hostPath:
             path: /var/run
         - name: jenkins-home
-          persistentVolumeClaim:
-            claimName: jenkins-pv-claim
