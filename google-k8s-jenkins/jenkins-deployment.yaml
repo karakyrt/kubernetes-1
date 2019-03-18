@@ -2,7 +2,7 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: jenkins-pod
-  namespace: TOOLS
+  namespace:  TOOLS
 spec:
   replicas: 1
   selector:
