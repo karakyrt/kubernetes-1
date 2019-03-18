@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
-metadata: 
+metadata:
   name: nexus-pvc
-  namespace: nexus
-  labels: 
+  namespace: TOOLS
+  labels:
     app: nexus
 spec:
   storageClassName: standard
@@ -11,4 +11,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi 
+      storage: 10Gi
