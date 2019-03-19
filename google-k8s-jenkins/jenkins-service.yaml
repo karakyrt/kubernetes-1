@@ -5,7 +5,7 @@ metadata:
     app: jenkins-pod
     name: jenkins-pod
   name: jenkins-pod-645f85d8b6-4grcj
-  namespace: TOOLS
+  namespace: tools
 spec:
   ports:
   - nodePort: 30619
