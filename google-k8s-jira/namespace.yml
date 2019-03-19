@@ -1,10 +1,4 @@
-{
-  "kind": "Namespace",
-  "apiVersion": "v1",
-  "metadata": {
-    "name": "jira",
-    "labels": {
-      "name": "jira"
-    }
-  }
-}
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: TOOLS
