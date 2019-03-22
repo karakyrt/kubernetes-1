@@ -2,9 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: jenkins-pod
-    name: jenkins-pod
-  name: jenkins-pod-645f85d8b6-4grcj
+    app: jenkins
+    name: jenkins
+  name: jenkins
   namespace: tools
 spec:
   ports:
@@ -13,6 +13,6 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: jenkins-pod
-    name: jenkins-pod
+    app: jenkins
+    name: jenkins
   type: LoadBalancer

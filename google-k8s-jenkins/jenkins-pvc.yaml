@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: jenkins-pv-claim
+  name: jenkins-pvc
   namespace: tools
   labels:
-    app: jenkins-pod
+    app: jenkins
 spec:
   accessModes:
     - ReadWriteOnce

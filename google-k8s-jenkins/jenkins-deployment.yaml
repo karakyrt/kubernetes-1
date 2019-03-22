@@ -1,24 +1,24 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: jenkins-pod
+  name: jenkins
   namespace: tools
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins-pod
-      name: jenkins-pod
+      app: jenkins
+      name: jenkins
   template:
     metadata:
       labels:
-        app: jenkins-pod
-        name: jenkins-pod
+        app: jenkins
+        name: jenkins
     spec:
       containers:
       - stdin: true
         tty: true
-        name: jenkins-pod
+        name: jenkins
         imagePullPolicy: Always
         image: fsadykov/centos_jenkins:0.2
         ports:
