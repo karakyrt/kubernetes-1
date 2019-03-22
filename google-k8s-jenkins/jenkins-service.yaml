@@ -8,7 +8,7 @@ metadata:
   namespace: tools
 spec:
   ports:
-  - nodePort: 30619
+  - nodePort: 30618
     port: 80
     protocol: TCP
     targetPort: 8080
