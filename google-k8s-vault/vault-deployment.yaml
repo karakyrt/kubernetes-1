@@ -39,7 +39,8 @@ spec:
              - IPC_LOCK
         env:
         - name: VAULT_DEV_ROOT_TOKEN_ID
-          value: vault-root-token
+          secret:
+            secretName: vault-secret
         volumeMounts:
           - mountPath: /var/run
             name: vault-pvc
