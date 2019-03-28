@@ -5,6 +5,8 @@ Jenkins is an open source automation tool written in Java with plugins built for
 #Setup Jenkins On Kubernetes Cluster
 
 Create a Namespace
+   
+
  kubectl create ns jenkins
 
 Create a deployment yaml and deploy it
