@@ -4,37 +4,37 @@ Secure, store and tightly control access to tokens, passwords, certificates, enc
 
 ## Installation
 
-1. First you will need kubernetes cluster. You can create one on GCP under 5mins. Once it`s ready ssh to that cluster. 
+1. First you will need kubernetes cluster. You can create one on GCP under 5mins. Once it`s ready ssh to that cluster.
 
 2. To start installation follow these steps:
 ```python
 yum install git -y
-git clone https://github.com/Murodbey/Kubernetes-vault-deployment-test.git
-cd Kubernetes-vault-deployment-test
+git clone https://github.com/Murodbey/Kubernetes-vault-deployment-tools.git
+cd Kubernetes-vault-deployment-tools
 kubectl create -f vault-deployment.yaml
 ```
 3. Once the installation is completed please run these command to check if everything was created or no:
 
 ```python
-kubectl get pods -n test
-kubectl get pvc -n test
-kubectl get pv -n test
-kubectl get deployment -n test
+kubectl get pods -n tools
+kubectl get pvc -n tools
+kubectl get pv -n tools
+kubectl get deployment -n tools
 ```
 4. Once it`s done, get the External IP for the Vault Service by running this command:
 
 ```python
-kubectl get service -n test
+kubectl get service -n tools
 ```
 
-and paste it on your browser. It should load Vault initial webpage where you are going to add the "token" and access your website. The "token" is "vault-root-token" and it`s also specified inside the file. 
+and paste it on your browser. It should load Vault initial webpage where you are going to add the "token" and access your website. The "token" is "vault-root-token" and it`s also specified inside the file.
 
 ## Possible errors
 
-1. You might get some errors related to namespaces. If you don`t have "test" namespace, then create it using this command:
+1. You might get some errors related to namespaces. If you don`t have "tools" namespace, then create it using this command:
 
 ```python
-kubectl create namespace test
+kubectl create namespace tools
 ```
 
 or you can disable the "namespace" line in the vault-deployment.yaml file.
@@ -47,5 +47,4 @@ or you can disable the "namespace" line in the vault-deployment.yaml file.
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
+Please make sure to update toolss as appropriate.
