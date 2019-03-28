@@ -71,9 +71,7 @@ kubectl create namespace tools
 or you can disable the "namespace" line in the vault-deployment.yaml file.
 
 2. Make sure the port 8200 is not being used by any service in your cluster. It may also cause to not completing job. To be more clear, LoadBalancer will not associate any external IP to your vault service and you won`t be able to see it on the browser.
-```python
 
-```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
