@@ -10,7 +10,7 @@ Secure, store and tightly control access to tokens, passwords, certificates, enc
 
 ```python
 yum install git -y
-git clone https://github.com/Murodbey/Kubernetes-vault-deployment-tools.git
+git clone https://github.com/Murodbey/Kubernetes-vault-deployment.git
 cd Kubernetes-vault-deployment-tools
 ```
 
