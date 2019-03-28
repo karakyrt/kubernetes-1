@@ -35,3 +35,6 @@ spec:
           hostPath:
             path: /var/run
         - name: jenkins-home
+        - name: jenkins-persistent-volume-claim
+          persistentVolumeClaim:
+            claimName: jenkins-pvc
