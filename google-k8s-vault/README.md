@@ -48,6 +48,7 @@ kubectl get deployment -n tools
 ```python
 kubectl get service -n tools
 ```
+[![Getting external IP](https://github.com/Murodbey/Kubernetes-vault-deployment-test/blob/master/pictures/External%20IP.PNG)]
 
 7. Paste the External IP on your browser. It should load Vault initial webpage where you are going to add the "token" and access your website. The token is the whatever you have specified in the vault-secret.yaml 
 Once you enter the token you will access to the website where you can manage the rest stuff.
