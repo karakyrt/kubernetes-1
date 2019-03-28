@@ -1,3 +1,7 @@
+# YouTube link 
+
+[![Here is the link to the YouTube video which shows how to create Vault under 5mins.](https://github.com/Murodbey/Kubernetes-vault-deployment-test/blob/master/pictures/Youtubelink.PNG)](https://www.youtube.com/watch?v=wt9WSn5WjTM&feature=youtu.be)
+
 # What is Vault?
 
 Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.
@@ -10,8 +14,8 @@ Secure, store and tightly control access to tokens, passwords, certificates, enc
 
 ```python
 yum install git -y
-git clone https://github.com/Murodbey/Kubernetes-vault-deployment.git
-cd Kubernetes-vault-deployment-tools
+git clone https://github.com/Murodbey/Kubernetes-vault-deployment-test.git
+cd Kubernetes-vault-deployment-test
 ```
 
 3. You need to encrypt your token(password) first before you add it to the vault-secret.yaml file.
