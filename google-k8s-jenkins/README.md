@@ -26,7 +26,7 @@ Jenkins is an open source automation tool written in Java with plugins built for
  ```
 4.Create a service yaml and deploy it. For accessing the Jenkins container from outside world, we should create a service and map it to the deployment.
 ```
- kubectl create -f jenkins-service.yaml --namespace=jenkins
+ kubectl create -f jenkins-service.yaml --namespace=tools
 ```
 5.Access the Jenkins application on a Node Port
 ```
@@ -38,7 +38,7 @@ Jenkins will ask for initial Admin password. You can get that from the pod logs 
 ```
 And with the pod name, you can get the logs as shown below. replace the pod name with your pod name
 ```
- kubectl logs jenkins-deployment-2539456353-j00w5 --namespace=jenkins
+ kubectl logs jenkins-deployment-2539456353-j00w5 --namespace=tools
 ```
 The password can be found at the end of the log
 
