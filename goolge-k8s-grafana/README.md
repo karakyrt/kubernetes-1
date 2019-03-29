@@ -67,7 +67,7 @@ It supports 30+ open source as well as commercial databases/data sources includi
      kubectl get deployment -n tools
      ```
      
-  7. Next use this command for check services what you have:
+  7. Next use this command to check services what you have:
      ```
      kubectl -n grafana get services
      ```
