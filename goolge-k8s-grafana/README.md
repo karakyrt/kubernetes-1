@@ -7,8 +7,9 @@ It supports 30+ open source as well as commercial databases/data sources includi
 1. You need use 'namespaces' it already created on Kubernetes Cluster 
 
 2. This will create a 'deployment' called 'grafana-deployment' under namespaces 'tools'  It sets the replica to 1, attaches the label 'app: grafana' to deployment. And does the following thinks:
-
-     kubectl create -f grafana-deployment.yaml:
+```
+kubectl create -f grafana-deployment.yaml:
+```
 
        1.Dowload the container image(attach image pull polices----this means if you have image on your server don't go to docker hub)
 
