@@ -67,8 +67,10 @@ It supports 30+ open source as well as commercial databases/data sources includi
      kubectl get deployment -n tools
      ```
      
-  7. kubectl -n grafana get services
-     
+  7. Next use this command for check services what you have:
+     ```
+     kubectl -n grafana get services
+     ```
    The output should show a service called 'grafana-service'
    Copy the EXTERNAL-IP of your service, and paste on your browsers > IP:3000
    You should see the login page for Grafana.
