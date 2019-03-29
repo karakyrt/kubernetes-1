@@ -31,10 +31,10 @@ It supports 30+ open source as well as commercial databases/data sources includi
    echo 'MWYyZDFlFGghHVH' | base64 --decode
    ```
    
- 4. After this you need to create file:  
-  
+ 4. After this you need to create file:
+    ```
     kubectl create -f secret.yaml
-
+    ```
 
 This 'secret' has encrypted information about log in and password
 
