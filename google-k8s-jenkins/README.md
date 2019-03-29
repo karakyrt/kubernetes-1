@@ -10,11 +10,11 @@ Jenkins is an open source automation tool written in Java with plugins built for
 ```
 2.Create a deployment yaml and deploy it
 ```
- kubectl create -f jenkins-deployment.yaml --namespace=jenkins
+ kubectl create -f jenkins-deployment.yaml --namespace=tools
 ```
 3.Now, you can get the deployment details using the following command
 ```
- kubectl  describe deployments --namespace=jenkins
+ kubectl  describe deployments --namespace=tools
 ```
 4.You can create a Persisten Volume. (PV) is a piece of storage in the cluster that has been provisioned by an administrator. This API object captures the details of the implementation of the storage, be that NFS, iSCSI, or a cloud-provider-specific storage system.
 ```
@@ -24,11 +24,11 @@ Jenkins is an open source automation tool written in Java with plugins built for
 ```
  kubectl create -f jenkins-pvc.yaml
  ```
-4.Create a service yaml and deploy it. For accessing the Jenkins container from outside world, we should create a service and map it to the deployment.
+6.Create a service yaml and deploy it. For accessing the Jenkins container from outside world, we should create a service and map it to the deployment.
 ```
  kubectl create -f jenkins-service.yaml --namespace=tools
 ```
-5.Access the Jenkins application on a Node Port
+7.Access the Jenkins application on a Node Port
 ```
  http://<node-ip>:port
 ```
