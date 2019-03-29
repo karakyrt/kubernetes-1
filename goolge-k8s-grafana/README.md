@@ -28,8 +28,9 @@ It supports 30+ open source as well as commercial databases/data sources includi
 
    You need to encrypt your token(password) first before you add it to the secret.yaml file where is you will have credentials:
    
-   '''
-   example encryption:                       
+   example encryption:
+   
+   ```
    echo -n 'admin' | base64
    YWRtaW4=
    '''
@@ -41,12 +42,14 @@ It supports 30+ open source as well as commercial databases/data sources includi
    
    '''
    echo 'MWYyZDFlFGghHVH' | base64 --decode
+   ```
    
-   '''
-       After this you need to create file:  
-
+  After this you need to create file:  
+  
           kubectl create -f secret.yaml
-   This 'secret' has encrypted information about log in and password
+
+
+This 'secret' has encrypted information about log in and password
 
        example:
        admin-password: YWRtaW4=
@@ -54,7 +57,9 @@ It supports 30+ open source as well as commercial databases/data sources includi
 
 4. Next step create 'service'
 
+```
     kubectl create -f grafana-service.yaml
+```
 
       This will create a 'service' called 'grafana-service'. The type of the service is 'LoadBalancer' which publishes the port '3000' of the node through port '3000' of the service, sets the protocol to TCP and sets the target port to '80' (this is the port of our container).
       NOTE : service type 'LoadBalancer' works only on cloud providers that provider Load-Balancer service.
