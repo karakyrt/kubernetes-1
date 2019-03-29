@@ -60,13 +60,13 @@ It supports 30+ open source as well as commercial databases/data sources includi
   NOTE : service type 'LoadBalancer' works only on cloud providers that provider Load-Balancer service.
 
   6. To check if everething correct run this commands:
-
-  ```python
+     ```
      kubectl get sectets -n tools
      kubectl get pods -n tools
      kubectl get service -n tools
-     kubectl get deployment -n tools 
-  ```
+     kubectl get deployment -n tools
+     ```
+     
   7. kubectl -n grafana get services
 
    The output should show a service called 'grafana-service'
