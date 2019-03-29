@@ -1,4 +1,4 @@
-     # Install Grafana 
+  # Install Grafana 
                                                           
   # What is Grafana ??
 Grafana is an open source, feature rich, powerful, elegant and highly-extensible analytics and monitoring software that runs on Linux, Windows and MacOS. It is a de facto software for data analytics, being used at Stack Overflow, eBay, PayPal, Uber and Digital Ocean – just to mention but a few.
