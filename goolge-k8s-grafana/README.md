@@ -11,18 +11,6 @@ It supports 30+ open source as well as commercial databases/data sources includi
 kubectl create -f grafana-deployment.yaml:
 ```
 
-  1.Dowload the container image(attach image pull polices----this means if you have image on your server don't go to docker hub)
-
-  2.Sets the resources request and limits for the container(cpu,memory)
-
-  3.Sets Up Variables(for secret.yaml without this deployment can't be created)
-
-  4.This file has Readiness Probe(check container healts)
-
-  5.Exposes port 3000 of the container (Grafana  uses  by defaults  port 3000)
-
-  6.Mounts the volume to a path inside the container
-
 3. After when you will have 'namespaces' and 'grafana-deployment'
 
    You need to encrypt your token(password) first before you add it to the secret.yaml file where is you will have credentials:
