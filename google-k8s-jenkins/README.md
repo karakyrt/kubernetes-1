@@ -6,16 +6,24 @@ Jenkins is an open source automation tool written in Java with plugins built for
 
 1.Create a Namespace
 ```   
- kubectl create ns jenkins
+ kubectl create ns tools
 ```
 2.Create a deployment yaml and deploy it
 ```
  kubectl create -f jenkins-deployment.yaml --namespace=jenkins
 ```
 3.Now, you can get the deployment details using the following command
- ```
+```
  kubectl  describe deployments --namespace=jenkins
 ```
+4.You can create a Persisten Volume. (PV) is a piece of storage in the cluster that has been provisioned by an administrator. This API object captures the details of the implementation of the storage, be that NFS, iSCSI, or a cloud-provider-specific storage system.
+```
+ kubectl create -f jenkins-pv.yaml
+```
+5.Create Persistent Voulme Claim. (PVC) is a request for storage by a user and allow a user to consume abstract storage resources
+```
+ kubectl create -f jenkins-pvc.yaml
+ ```
 4.Create a service yaml and deploy it. For accessing the Jenkins container from outside world, we should create a service and map it to the deployment.
 ```
  kubectl create -f jenkins-service.yaml --namespace=jenkins
@@ -23,7 +31,7 @@ Jenkins is an open source automation tool written in Java with plugins built for
 5.Access the Jenkins application on a Node Port
 ```
  http://<node-ip>:port
- ```
+```
 Jenkins will ask for initial Admin password. You can get that from the pod logs either from kubernetes dashboard or  CLI. You can get the pod details using the following CLI command
 ```
  kubectl get pods --namespace=jenkins
