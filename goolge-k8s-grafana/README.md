@@ -84,13 +84,11 @@ This 'secret' has encrypted information about log in and password
    password = *******
    ```
    
-7. If needed you can create:
+7. NOTE: If needed you can create:
    kubectl create -f grafana-pv.yaml
    kubectl create -f grafana-pvc.yaml
    This filels create volume for your
-   ```
-   NOTE: but in this case i didn't see any files creating storage
-   ```
+   
 8. After this you can work in Grafana use this link:
    http://35.226.61.13:3000/login
    
