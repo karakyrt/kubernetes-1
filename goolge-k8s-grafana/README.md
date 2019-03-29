@@ -31,9 +31,9 @@ kubectl create -f grafana-deployment.yaml
    echo 'MWYyZDFlFGghHVH' | base64 --decode
    ```
    
-  4. After this you need to create file:  
+ 4. After this you need to create file:  
   
-          kubectl create -f secret.yaml
+        kubectl create -f secret.yaml
 
 
 This 'secret' has encrypted information about log in and password
