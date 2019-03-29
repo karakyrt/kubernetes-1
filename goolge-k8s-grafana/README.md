@@ -38,18 +38,18 @@ It supports 30+ open source as well as commercial databases/data sources includi
 
     This 'secret' has encrypted information about log in and password
 
-        example:
-           
-       apiVersion: v1
-       kind: Secret
-       data:
-       admin-password: YWRtaW4=
-       admin-username: YWRtaW4=
-       metadata:
-       name: grafana
-       namespace: tools
-       type: Opaque
-     
+     example:
+      ```     
+     apiVersion: v1
+     kind: Secret
+     data:
+     admin-password: YWRtaW4=
+     admin-username: YWRtaW4=
+     metadata:
+     name: grafana
+     namespace: tools
+     type: Opaque
+     ```
 
   5. Next step create 'service'
 
@@ -57,7 +57,7 @@ It supports 30+ open source as well as commercial databases/data sources includi
     kubectl create -f grafana-service.yaml
 ```
 
-  This will create a 'service' called 'grafana-service'. The type of the service is 'LoadBalancer' which publishes the port '80' of the   pod through port '30313' of the service, sets the protocol to TCP and sets the target port to '80' (this is the port of our        container).
+  This will create a 'service' called 'grafana-service'. The type of the service is 'LoadBalancer' which publishes the port '80' of the   pod through port '30313' of the service, sets the protocol to TCP and sets the target port to '80' (this is the port of our             container).
   NOTE : service type 'LoadBalancer' works only on cloud providers that provider Load-Balancer service.
 
   6. To check if everething correct run this commands:
