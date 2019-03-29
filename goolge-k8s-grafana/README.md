@@ -36,11 +36,11 @@ It supports 30+ open source as well as commercial databases/data sources includi
    
    echo -n '1fhg9e67df' | base64
    DRhjjZDFDGTlwmRm
-   '''
+   ```
    
    for decryption use this command:
    
-   '''
+   ```
    echo 'MWYyZDFlFGghHVH' | base64 --decode
    ```
    
