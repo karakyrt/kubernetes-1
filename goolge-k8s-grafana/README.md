@@ -36,31 +36,31 @@ It supports 30+ open source as well as commercial databases/data sources includi
     kubectl create -f secret.yaml
     ```
 
-This 'secret' has encrypted information about log in and password
+    This 'secret' has encrypted information about log in and password
 
         example:
-         ```       
-         apiVersion: v1
-         kind: Secret
-         data:
-         admin-password: YWRtaW4=
-         admin-username: YWRtaW4=
-         metadata:
-         name: grafana
-         namespace: tools
-         type: Opaque
-         ```
+           
+       apiVersion: v1
+       kind: Secret
+       data:
+       admin-password: YWRtaW4=
+       admin-username: YWRtaW4=
+       metadata:
+       name: grafana
+       namespace: tools
+       type: Opaque
+     
 
-5. Next step create 'service'
+  5. Next step create 'service'
 
 ```
     kubectl create -f grafana-service.yaml
 ```
 
-  This will create a 'service' called 'grafana-service'. The type of the service is 'LoadBalancer' which publishes the port '80' of the pod through port '30313' of the service, sets the protocol to TCP and sets the target port to '80' (this is the port of our container).
+  This will create a 'service' called 'grafana-service'. The type of the service is 'LoadBalancer' which publishes the port '80' of the   pod through port '30313' of the service, sets the protocol to TCP and sets the target port to '80' (this is the port of our        container).
   NOTE : service type 'LoadBalancer' works only on cloud providers that provider Load-Balancer service.
 
-6. To check if everething correct run this commands:
+  6. To check if everething correct run this commands:
 
 ```python
    kubectl get sectets -n tools
@@ -68,7 +68,7 @@ This 'secret' has encrypted information about log in and password
    kubectl get service -n tools
    kubectl get deployment -n tools 
 ```
-7. kubectl -n grafana get services
+  7. kubectl -n grafana get services
 
    The output should show a service called 'grafana-service'
    Copy the EXTERNAL-IP of your service, and paste on your browsers > IP:3000
@@ -85,7 +85,7 @@ This 'secret' has encrypted information about log in and password
    kubectl create -f grafana-pvc.yaml
    This filels create volume for your
    
-8. After this you can work in Grafana use this link:
+  8. After this you can work in Grafana use this link:
    http://35.226.61.13:3000/login
    
 
