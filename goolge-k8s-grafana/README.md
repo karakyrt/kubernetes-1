@@ -73,12 +73,10 @@ It supports 30+ open source as well as commercial databases/data sources includi
    Copy the EXTERNAL-IP of your service, and paste on your browsers > IP:3000
    You should see the login page for Grafana.
    Set Up Login and Password:
-   
      ```
      username = *******
      password = *******
      ```
-   
    NOTE: If needed you can create:
    kubectl create -f grafana-pv.yaml
    kubectl create -f grafana-pvc.yaml
