@@ -74,17 +74,17 @@ It supports 30+ open source as well as commercial databases/data sources includi
    You should see the login page for Grafana.
    Set Up Login and Password:
    
-   ```
-   username = *******
-   password = *******
-   ```
+     ```
+     username = *******
+     password = *******
+     ```
    
    NOTE: If needed you can create:
    kubectl create -f grafana-pv.yaml
    kubectl create -f grafana-pvc.yaml
    This filels create volume for your
    
-  8. After this you can work in Grafana use this link:
+   8. After this you can work in Grafana use this link:
    http://35.226.61.13:3000/login
    
 
