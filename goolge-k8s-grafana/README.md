@@ -84,12 +84,12 @@ This 'secret' has encrypted information about log in and password
    password = *******
    ```
    
-7. NOTE: If needed you can create:
+   NOTE: If needed you can create:
    kubectl create -f grafana-pv.yaml
    kubectl create -f grafana-pvc.yaml
    This filels create volume for your
    
-8. After this you can work in Grafana use this link:
+7. After this you can work in Grafana use this link:
    http://35.226.61.13:3000/login
    
 
