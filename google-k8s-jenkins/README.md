@@ -1,8 +1,8 @@
-#What is Jenkins
+# What is Jenkins
 
 Jenkins is an open source automation tool written in Java with plugins built for Continuous Integration purpose. Jenkins is used to build and test your software projects continuously making it easier for developers to integrate changes to the project, and making it easier for users to obtain a fresh build. It also allows you to continuously deliver your software by integrating with a large number of testing and deployment technologies.
 
-##Setup Jenkins On Kubernetes Cluster
+## Setup Jenkins On Kubernetes Cluster
 
 1.Create a Namespace
 ```   
