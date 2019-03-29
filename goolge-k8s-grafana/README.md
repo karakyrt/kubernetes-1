@@ -8,7 +8,7 @@ It supports 30+ open source as well as commercial databases/data sources includi
 
 2. This will create a 'deployment' called 'grafana-deployment' under namespaces 'tools'  It sets the replica to 1, attaches the label 'app: grafana' to deployment. And does the following thinks:
 ```
-kubectl create -f grafana-deployment.yaml:
+kubectl create -f grafana-deployment.yaml
 ```
 
 3. After when you will have 'namespaces' and 'grafana-deployment'
