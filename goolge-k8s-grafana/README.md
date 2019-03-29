@@ -52,7 +52,8 @@ It supports 30+ open source as well as commercial databases/data sources includi
 This 'secret' has encrypted information about log in and password
 
        example:
-```apiVersion: v1
+```       
+apiVersion: v1
 kind: Secret
 data:
   admin-password: YWRtaW4=
