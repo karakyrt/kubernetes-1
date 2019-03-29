@@ -36,9 +36,12 @@ It supports 30+ open source as well as commercial databases/data sources includi
    DRhjjZDFDGTlwmRm
    '''
    
-   for decryption:
-     use this command: echo 'MWYyZDFlFGghHVH' | base64 --decode
-
+   for decryption use this command:
+   
+   '''
+   echo 'MWYyZDFlFGghHVH' | base64 --decode
+   
+   '''
        After this you need to create file:  
 
           kubectl create -f secret.yaml
