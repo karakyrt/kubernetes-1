@@ -52,8 +52,15 @@ It supports 30+ open source as well as commercial databases/data sources includi
 This 'secret' has encrypted information about log in and password
 
        example:
-       admin-password: YWRtaW4=
-       admin-username: YWRtaW4=
+       apiVersion: v1
+kind: Secret
+data:
+  admin-password: YWRtaW4=
+  admin-username: YWRtaW4=
+metadata:
+  name: grafana
+  namespace: tools
+type: Opaque
 
 4. Next step create 'service'
 
