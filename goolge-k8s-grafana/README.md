@@ -27,13 +27,15 @@ It supports 30+ open source as well as commercial databases/data sources includi
 3. After when you will have 'namespaces' and 'grafana-deployment'
 
    You need to encrypt your token(password) first before you add it to the secret.yaml file where is you will have credentials:
-
+   
+   '''
    example encryption:                       
    echo -n 'admin' | base64
-YWRtaW4=
-echo -n '1fhg9e67df' | base64
-DRhjjZDFDGTlwmRm
-
+   YWRtaW4=
+   echo -n '1fhg9e67df' | base64
+   DRhjjZDFDGTlwmRm
+   '''
+   
    for decryption:
      use this command: echo 'MWYyZDFlFGghHVH' | base64 --decode
 
