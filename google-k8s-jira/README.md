@@ -30,7 +30,3 @@ kubectl create -f service-jira.yml -n tools
 
 To check if it works, copy IP address and specify target port over url.
 
-
-
-
-#Company_fscoding
