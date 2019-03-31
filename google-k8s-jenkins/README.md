@@ -28,7 +28,7 @@ Jenkins is an open source automation tool written in Java with plugins built for
 ```
  kubectl create -f jenkins-service.yaml --namespace=tools
 ```
-7.Access the Jenkins application on a Node Port
+7.Access the Jenkins application
 ```
  http://<node-ip>:port
 ```
