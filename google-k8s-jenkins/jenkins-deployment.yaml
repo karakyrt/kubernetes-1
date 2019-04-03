@@ -1,3 +1,24 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: tools
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkins-home
+  namespace: tools
+  labels:
+    name: jenkins
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+
+---
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
@@ -26,12 +47,36 @@ spec:
         - containerPort: 50000
 
         volumeMounts:
+
           - mountPath: /var/run
             name: docker-sock
-          - mountPath: /var/jenkins_home
+
+          - mountPath: /root/.jenkins
             name: jenkins-home
       volumes:
         - name: docker-sock
           hostPath:
             path: /var/run
         - name: jenkins-home
+          persistentVolumeClaim:
+            claimName: jenkins-home
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: jenkins
+    name: jenkins
+  name: jenkins
+  namespace: tools
+spec:
+  ports:
+  - nodePort: 30618
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: jenkins
+    name: jenkins
+  type: LoadBalancer
